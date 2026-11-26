@@ -17,6 +17,22 @@ html {
     scroll-behavior: smooth;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
 body {
     background: var(--black);
     color: var(--white);
