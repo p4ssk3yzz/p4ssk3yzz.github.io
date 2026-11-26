@@ -17,22 +17,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.logo img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-}
-
 body {
     background: var(--black);
     color: var(--white);
@@ -332,4 +316,22 @@ body {
         animation: none !important;
         transition: none !important;
     }
+}
+
+/* P4SSK3YZZ HEADER LOGO FIX */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 48px;
+    max-height: 48px;
+    object-fit: contain;
+    display: block;
 }
