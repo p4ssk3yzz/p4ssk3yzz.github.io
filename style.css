@@ -1,0 +1,362 @@
+
+/* =====================================
+   P4SSK3YZZ CYBERSECURITY RESEARCH HUB
+   Main stylesheet
+===================================== */
+
+:root {
+    --bg: #080d0a;
+    --panel: #101914;
+    --panel-hover: #14251a;
+    --green: #55ff91;
+    --green-dark: #20c968;
+    --white: #edf5ef;
+    --muted: #91a397;
+    --border: #20372a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION */
+
+header {
+    width: 100%;
+    background: rgba(8, 13, 10, 0.96);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 19px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    gap: 27px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 680px;
+    padding: 115px 25px 90px;
+    max-width: 1150px;
+    margin: auto;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 5%;
+    top: 100px;
+    background: rgba(45, 255, 115, 0.07);
+    filter: blur(90px);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.terminal-label {
+    color: var(--green);
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 100px);
+    line-height: 1.05;
+    letter-spacing: -4px;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero > p {
+    color: var(--muted);
+    max-width: 560px;
+    margin: 25px 0 32px;
+    font-size: 17px;
+}
+
+.main-button {
+    display: inline-block;
+    background: var(--green);
+    color: #061109;
+    padding: 13px 23px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #a1ffbd;
+    transform: translateY(-3px);
+}
+
+/* TERMINAL */
+
+.terminal {
+    max-width: 540px;
+    margin-top: 65px;
+    background: #050a07;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    padding: 23px;
+    border-radius: 5px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.terminal p {
+    font-family: monospace;
+    font-size: 13px;
+    margin: 5px 0;
+    color: var(--muted);
+}
+
+.terminal p span {
+    color: var(--green);
+}
+
+/* GENERAL SECTIONS */
+
+.labs,
+.projects,
+.about {
+    max-width: 1150px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+.section-heading {
+    margin-bottom: 38px;
+}
+
+.section-heading > span {
+    color: var(--green);
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.section-heading > p {
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+/* RESEARCH CARDS */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.lab-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.lab-card:hover {
+    background: var(--panel-hover);
+    border-color: var(--green);
+    transform: translateY(-5px);
+}
+
+.lab-card h3 {
+    color: var(--green);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.lab-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.lab-card a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.lab-card a:hover {
+    color: var(--green);
+}
+
+/* PROJECTS */
+
+.projects {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.project-placeholder {
+    background: #050a07;
+    border: 1px dashed #31543d;
+    text-align: center;
+    padding: 55px 20px;
+    border-radius: 6px;
+}
+
+.project-placeholder p {
+    color: var(--green);
+    font-family: monospace;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.project-placeholder span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ABOUT */
+
+.about > p {
+    color: var(--muted);
+    max-width: 700px;
+    font-size: 16px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #050806;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 5px;
+}
+
+footer p:last-child {
+    color: var(--green);
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding-top: 80px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero > p {
+        font-size: 15px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .labs,
+    .projects,
+    .about {
+        padding: 65px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .terminal {
+        margin-top: 45px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
